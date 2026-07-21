@@ -736,3 +736,33 @@ body {
 
 
 /* contact page CLOSE.......................... */
+
+
+
+
+/* image no download  /-------------------------------------------*/
+
+img{
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+img::selection{
+  background: transparent;
+}
+
+
+/* मोबाइल पर Long Press रोकें
+
+CSS में यह भी जोड़ें: */
+
+img{
+    -webkit-touch-callout: none;
+}
+
+
+/* image no download  /-------------------------------------------*/
+
+

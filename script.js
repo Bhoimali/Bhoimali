@@ -195,6 +195,9 @@ async function loadAllPages() {
     await loadPage("editaccount", "editaccount.html");
     await loadPage("sevasamiti", "sevasamiti.html");
     await loadPage("downloadpdf", "downloadpdf.html");
+
+     await loadPage("news", "news.html");
+    
 }
 
 // loadAllPages();
@@ -575,42 +578,6 @@ function initAccordionB() {
 
 
 
-//  no down load image -------------start-------------------
-
-
-// Right Click Disable
-document.addEventListener("contextmenu", function(e){
-    if(e.target.tagName === "IMG"){
-        e.preventDefault();
-    }
-});
-
-// Drag Disable
-document.querySelectorAll("img").forEach(img=>{
-    img.setAttribute("draggable","false");
-});
-
-// Keyboard Shortcuts Disable
-document.addEventListener("keydown", function(e){
-
-    if(e.key === "F12"){
-        e.preventDefault();
-    }
-
-    if(e.ctrlKey && ["u","s","c","a","p"].includes(e.key.toLowerCase())){
-        e.preventDefault();
-    }
-
-    if(e.ctrlKey && e.shiftKey &&
-       ["i","j","c"].includes(e.key.toLowerCase())){
-        e.preventDefault();
-    }
-
-});
-
-
-
-//  no down load image ---------close-----------------------
 
 
 
@@ -621,6 +588,25 @@ function showPage(page) {
 
     const allLinks = document.querySelectorAll("[data-page]");
     const sections = document.querySelectorAll(".content");
+
+
+    // News ↔ Home Button Change----------start
+document.querySelectorAll("#navActionBtnMobile, #navActionBtnDesktop")
+.forEach(btn => {
+
+    if (page === "news") {
+        btn.innerHTML = "Home";
+        btn.dataset.page = "home";
+        btn.classList.replace("btn-danger", "btn-primary");
+    } else {
+        btn.innerHTML = "News";
+        btn.dataset.page = "news";
+        btn.classList.replace("btn-primary", "btn-danger");
+    }
+
+});
+// News ↔ Home Button Change----------close --
+
 
     // Active हटाओ
     allLinks.forEach(l => l.classList.remove("active"));
@@ -707,6 +693,8 @@ function showPage(page) {
     }
 
     localStorage.setItem("activePage", page);
+
+
 }
 
 
@@ -738,3 +726,47 @@ document.addEventListener("DOMContentLoaded", async function () {
     showPage("home");
 
 });
+
+
+
+
+//  no down load image -------------start-------------------
+
+
+// Right Click Disable
+document.addEventListener("contextmenu", function(e){
+    if(e.target.tagName === "IMG"){
+        e.preventDefault();
+    }
+});
+
+// Drag Disable
+document.querySelectorAll("img").forEach(img=>{
+    img.setAttribute("draggable","false");
+});
+
+// Keyboard Shortcuts Disable
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "F12"){
+        e.preventDefault();
+    }
+
+    if(e.ctrlKey && ["u","s","c","a","p"].includes(e.key.toLowerCase())){
+        e.preventDefault();
+    }
+
+    if(e.ctrlKey && e.shiftKey &&
+       ["i","j","c"].includes(e.key.toLowerCase())){
+        e.preventDefault();
+    }
+
+});
+
+
+
+//  no down load image ---------close-----------------------
+
+
+
+

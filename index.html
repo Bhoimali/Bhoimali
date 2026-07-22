@@ -35,13 +35,13 @@
 
     <!-- Keywords -->
     <meta name="keywords" content="भोई माली समाज, Bhoi Mali Samaj, Bhoi Mali, BhoiMali, Mali Samaj, भोई समाज, भोईमाली,  भोई समाज, 
-      Bhoi Community, Rajasthan, समाज, भोई, राजमाली, RajMali, Rajmali, Community">
+      Bhoi Community, Rajasthan, समाज, mali, Mali, भोई, bhoimali, राजमाली, RajMali, Rajmali, Community">
 
     <meta name="author" content="Bhoi Mali Samaj">
     <!-- <meta name="robots" content="index, follow"> -->
 
     <meta name="robots" content="index,follow,noimageindex">
-<meta name="googlebot" content="index,follow,noimageindex">
+    <meta name="googlebot" content="index,follow,noimageindex">
 
 
     <meta name="language" content="Hindi, English">
@@ -50,7 +50,7 @@
     <link rel="canonical" href="https://bhoimali.vercel.app/">
 
 
-     
+
     <!-- https://res.cloudinary.com/uvnoet8d/image/upload/v1784656946/01_03_LogoSamajChatgpt.png 
      https://res.cloudinary.com/uvnoet8d/image/upload/v1784659475/LogoChatGPtBlue.png
     
@@ -58,7 +58,7 @@
     
     -->
     <link rel="icon" type="image/png"
-         href="https://res.cloudinary.com/uvnoet8d/image/upload/v1784659475/LogoChatGPtBlue.png"> 
+        href="https://res.cloudinary.com/uvnoet8d/image/upload/v1784659475/LogoChatGPtBlue.png">
 
     <!-- Open Graph (Facebook / WhatsApp) -->
     <meta property="og:type" content="website">
@@ -98,6 +98,14 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
     <!-- Your CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -120,17 +128,32 @@
 
 <body>
     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark border-bottom fixed-top">
         <div class="container-fluid">
 
-            <!-- https://res.cloudinary.com/uvnoet8d/image/upload/v1784567310/SamajLogoWithName.png -->
             <a class="navbar-brand"><img
                     src="https://res.cloudinary.com/uvnoet8d/image/upload/f_auto,q_auto/v1784567310/SamajLogoWithName.png"
                     alt="Bhoi Mali Samaj Logo" width="180" height="32"></a>
-            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasMenu"><span class="navbar-toggler-icon"></span></button>
+
+
+            <div class="d-flex align-items-center ms-auto d-lg-none">
+
+
+                <a id="navActionBtnMobile" data-page="news" class="btn btn-danger btn-sm news-btn me-2">
+
+                </a>
+
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMenu"><span class="navbar-toggler-icon"></span></button>
+
+            </div>
+
+
+
+
             <div class="collapse navbar-collapse justify-content-center">
-                <ul class="navbar-nav mb-2 mb-lg-0 text-center fs-5">
+                <ul class="navbar-nav mb-2 mb-lg-0 text-center fs-6">
                     <li><a data-page="home" class="nav-link text-white active">Home</a></li>
                     <li><a data-page="samajbook" class="nav-link text-white">Book</a></li>
                     <li><a data-page="student" class="nav-link text-white">EduSathi</a></li>
@@ -152,10 +175,19 @@
                             <!-- <li><a data-page="shiksha" class="dropdown-item text-blue">शिक्षा व संस्कार</a></li> -->
                         </ul>
                     </li>
+
+                    <a id="navActionBtnDesktop" data-page="news" class="btn btn-danger btn-sm news-btn ms-auto d-none d-lg-inline-flex  news2">
+                <!-- class=""> -->
+            </a>
                 </ul>
+
+
             </div>
+
+            
         </div>
     </nav>
+
 
     <!-- Offcanvas Menu -->
     <div class="offcanvas offcanvas-start text-white bg-dark fw-bold" id="offcanvasMenu" style="background:#0d6efd;">
@@ -193,6 +225,7 @@
                     </ul>
                 </li>
             </ul>
+
         </div>
     </div>
 
@@ -210,6 +243,7 @@
         <div id="editaccount" class="content"></div>
         <div id="sevasamiti" class="content"></div>
         <div id="downloadpdf" class="content"></div>
+        <div id="news" class="content"></div>
     </div>
 
 
@@ -305,7 +339,7 @@
 
             <section class="contact-container">
 
-                 <article class="contact-card">
+                <article class="contact-card">
 
                     <header class="contact-header">
                         <h1>🔒 Privacy Policy</h1>
@@ -458,25 +492,28 @@
                                 </p>
                             </div>
                         </section>
-<section class="contact-item">
-    <div class="contact-icon">📱</div>
-    <div>
-        <h2>तकनीकी जानकारी</h2>
-        <p>
-            हमारी वेबसाइट या ऐप के उपयोग के दौरान डिवाइस संबंधी जानकारी, ब्राउज़र या ऐप संस्करण, IP Address, सामान्य स्थान (यदि उपलब्ध हो), उपयोग संबंधी आँकड़े तथा त्रुटि (Crash) संबंधी जानकारी तकनीकी उद्देश्यों के लिए एकत्र की जा सकती है।
-        </p>
-    </div>
-</section>
+                        <section class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h2>तकनीकी जानकारी</h2>
+                                <p>
+                                    हमारी वेबसाइट या ऐप के उपयोग के दौरान डिवाइस संबंधी जानकारी, ब्राउज़र या ऐप संस्करण,
+                                    IP Address, सामान्य स्थान (यदि उपलब्ध हो), उपयोग संबंधी आँकड़े तथा त्रुटि (Crash)
+                                    संबंधी जानकारी तकनीकी उद्देश्यों के लिए एकत्र की जा सकती है।
+                                </p>
+                            </div>
+                        </section>
 
-<section class="contact-item">
-    <div class="contact-icon">🔒</div>
-    <div>
-        <h2>संवेदनशील जानकारी</h2>
-        <p>
-            हमारा ऐप पासवर्ड, बैंक खाते की जानकारी, डेबिट/क्रेडिट कार्ड विवरण, आधार संख्या या अन्य अत्यधिक संवेदनशील व्यक्तिगत जानकारी एकत्र नहीं करता।
-        </p>
-    </div>
-</section>
+                        <section class="contact-item">
+                            <div class="contact-icon">🔒</div>
+                            <div>
+                                <h2>संवेदनशील जानकारी</h2>
+                                <p>
+                                    हमारा ऐप पासवर्ड, बैंक खाते की जानकारी, डेबिट/क्रेडिट कार्ड विवरण, आधार संख्या या
+                                    अन्य अत्यधिक संवेदनशील व्यक्तिगत जानकारी एकत्र नहीं करता।
+                                </p>
+                            </div>
+                        </section>
 
 
 
@@ -521,9 +558,9 @@
                         </section>
                     </div>
 
-<p style="text-align:center;margin-top:25px;">
-<strong>Last Updated:</strong> 21 July 2026
-</p>
+                    <p style="text-align:center;margin-top:25px;">
+                        <strong>Last Updated:</strong> 21 July 2026
+                    </p>
 
 
 

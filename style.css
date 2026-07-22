@@ -1,8 +1,9 @@
 body {
-  font-family: Arial, sans-serif;
+  body{
+    font-family: "Inter", "Noto Sans Devanagari", "Segoe UI", Roboto, Arial, sans-serif;
+}
   margin: 0;
-    background: url("images/02Background.jpg") no-repeat center center fixed;
-  /* background: url("https://drive.google.com/thumbnail?id=15rFll3ag66SUuiTJFfsiSuEQ4Y52yDNj&sz=w1000") no-repeat center center fixed; */
+  background: url("https://res.cloudinary.com/uvnoet8d/image/upload/f_auto,q_auto/v1783913918/02Background.jpg") no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -36,6 +37,7 @@ body {
   cursor: pointer;
   transition: color 0.3s;
   display: inline-block;
+  font-weight: 600;
 }
 
 .navbar-nav .nav-link::after,
@@ -471,13 +473,19 @@ body {
 
 .itemteem {
   padding: 10px 0px;
-  margin: 10px;
+  margin: 15px;
   color: green;
   border-radius: 3px;
-  margin-bottom: -15px;
+  margin-bottom: -10px;
   margin-top: 1px;
 }
 
+
+.border2{
+  border: 1px solid #000;
+   margin-bottom: 5px;
+
+}
 
 /* //   Sadaysy STYLE close............................................ */
 
@@ -739,8 +747,8 @@ body {
 
 
 
+/* no download  --------------------start ---------------*/
 
-/* image no download  /-------------------------------------------*/
 
 img{
   -webkit-user-drag: none;
@@ -763,6 +771,145 @@ img{
 }
 
 
-/* image no download  /-------------------------------------------*/
+/* no download  --------------------close ---------------*/
 
 
+
+
+
+
+
+/* News Update  --------------------start ---------------*/
+
+.news-btn{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    font-weight: 600;
+    /* padding: 6px 14px;  */
+    /* background: #dc3545; */
+    border: none;
+    color: #d5e962;
+    /* box-shadow: 0 3px 10px rgba(220,53,69,.35); */
+    transition: .3s;
+    margin-right: 65%;
+    
+}
+
+
+.news-btn:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(220,53,69,.45);
+}
+
+/* Shine Effect */
+.news-btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,.7) 50%,
+        rgba(255,255,255,0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: shine 3.5s infinite;
+}
+
+@keyframes shine{
+    0%{
+        left: -80%;
+    }
+    20%{
+        left: 130%;
+    }
+    100%{
+        left: 130%;
+    }
+}
+
+.news-btn .badge{
+    font-size:10px;
+    font-weight:700;
+    border-radius:10px;
+}
+
+
+
+.news-btn{
+    white-space: nowrap;
+    margin-right: 15px !important;
+}
+
+.navbar-toggler{
+    margin-left: 0;
+}
+
+
+.news2{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 8px 14px; 
+    /* background: #dc3545; */
+    border: none;
+    color: #d5e962;
+ 
+}
+
+
+/* 321px - 375px */
+@media (min-width:276px) and (max-width:310px){
+  .d-flex.align-items-center{
+    gap: -8px;   /* दोनों बटन के बीच हमेशा 8px */
+}
+}
+
+/* 321px - 375px */
+@media (min-width:311px) and (max-width:375px){
+  .d-flex.align-items-center{
+    gap: 28px;   /* दोनों बटन के बीच हमेशा 8px */
+}
+}
+
+/* 376px - 425px */
+@media (min-width:376px) and (max-width:425px){
+   .d-flex.align-items-center{
+    gap: 55px;   /* दोनों बटन के बीच हमेशा 8px */
+}
+}
+
+/* 426px - 767px */
+@media (min-width:426px) and (max-width:475px){
+   .d-flex.align-items-center{
+    gap: 68px;   /* दोनों बटन के बीच हमेशा 8px */
+}
+}
+
+/* 426px - 767px */
+@media (min-width:476px) and (max-width:567px){
+   .d-flex.align-items-center{
+    gap: 160px;   /* दोनों बटन के बीच हमेशा 8px */
+}
+}
+
+/* 426px - 767px */
+@media (min-width:568px) and (max-width:765px){
+   .d-flex.align-items-center{
+    gap: 200px;   /* दोनों बटन के बीच हमेशा 8px */
+}
+}
+
+@media (min-width:766px) and (max-width:991px){
+   .d-flex.align-items-center{
+    gap: 300px;   /* दोनों बटन के बीच हमेशा 8px */
+}
+}
+
+
+/* News Update  --------------------CLOSE ---------------*/
